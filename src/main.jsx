@@ -7,7 +7,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/aka-cila-journey">
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/:slug" element={<PuzzlePage />} />
