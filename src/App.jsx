@@ -4,42 +4,46 @@ import Zero from "./assets/0.png";
 import One from "./assets/1.png";
 import Two from "./assets/2.png";
 import Three from "./assets/3.png";
-import Continued from "./assets/continued.png";
+import Four from "./assets/4.png";
+import Five from "./assets/5.png";
+// import Continued from "./assets/continued.png";
 
 function App() {
-    const sections = [
-        { href: "/", src: Zero, alt: "title" },
-        { href: "/one", src: One, alt: "one" },
-        { href: "/two", src: Two, alt: "two" },
-        { href: "/three", src: Three, alt: "three" },
-    ];
+	const sections = [
+		{ href: "/", src: Zero, alt: "title" },
+		{ href: "/one", src: One, alt: "one" },
+		{ href: "/two", src: Two, alt: "two" },
+		{ href: "/three", src: Three, alt: "three" },
+		{ href: "/", src: Four, alt: "four" },
+		{ href: "/", src: Five, alt: "Five" },
+	];
 
-    return (
-        <div className="flex flex-col justify-center items-center min-h-screen">
-            <div className="w-full max-w-[40rem] px-4">
-                <div className="grid grid-cols-2 aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-lg bg-white mx-auto">
-                    {sections.map((item, index) => (
-                        <Link to={item.href} key={index}>
-                            <img
-                                src={item.src}
-                                alt={item.alt}
-                                className="object-cover w-full h-full transition-transform hover:scale-[1.02]"
-                            />
-                        </Link>
-                    ))}
-                </div>
-                <div className="flex justify-center items-center py-4">
+	return (
+		<div className="flex flex-col justify-center items-center min-h-screen">
+			<div className="w-full max-w-[40rem] px-4">
+				<div className="grid grid-cols-2 aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-lg bg-white mx-auto">
+					{sections.map((item, index) => (
+						<Link to={item.href} key={index}>
+							<img
+								src={item.src}
+								alt={item.alt}
+								className="object-cover w-full h-full transition-transform hover:scale-[1.02]"
+							/>
+						</Link>
+					))}
+				</div>
+				{/* <div className="flex justify-center items-center py-4">
                     <img
                         src={Continued}
                         alt={`Back to Home`}
                         className="w-full max-w-[15rem] object-cover drop-shadow-xl"
                     />
-                </div>
-            </div>
+                </div> */}
+			</div>
 
-            <Footer />
-        </div>
-    );
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

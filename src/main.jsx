@@ -6,12 +6,12 @@ import PuzzlePage from "./PuzzlePage.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <BrowserRouter basename="/aka-cila-journey">
-            <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="/:slug" element={<PuzzlePage />} />
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
+	<React.StrictMode>
+		<BrowserRouter basename="/aka-cila-journey">
+			<Routes>
+				<Route path="/" element={<App />} />
+				<Route path="/:slug" element={<PuzzlePage />} />
+			</Routes>
+		</BrowserRouter>
+	</React.StrictMode>
 );

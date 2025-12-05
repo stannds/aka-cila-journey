@@ -26,71 +26,71 @@ import three5 from "./assets/three/5.png";
 import three6 from "./assets/three/6.png";
 
 const ImageList = ({ images }) => (
-    <div className="flex justify-center items-start min-h-screen px-8 sm:px-10 py-10 overflow-y-auto">
-        <div className="w-full max-w-[36rem]">
-            <div className="grid gap-4 sm:gap-6">
-                {images.map((src, i) => (
-                    <div
-                        key={i}
-                        className="backdrop-blur transition-transform hover:scale-[1.02]"
-                    >
-                        <img
-                            src={src}
-                            alt={`Gambar ${i + 1}`}
-                            className="w-full object-cover drop-shadow-xl"
-                        />
-                    </div>
-                ))}
-            </div>
-        </div>
-    </div>
+	<div className="flex justify-center items-start min-h-screen px-8 sm:px-10 py-10 overflow-y-auto">
+		<div className="w-full max-w-[36rem]">
+			<div className="grid gap-4 sm:gap-6">
+				{images.map((src, i) => (
+					<div
+						key={i}
+						className="backdrop-blur transition-transform hover:scale-[1.02]"
+					>
+						<img
+							src={src}
+							alt={`Gambar ${i + 1}`}
+							className="w-full object-cover drop-shadow-xl"
+						/>
+					</div>
+				))}
+			</div>
+		</div>
+	</div>
 );
 
 export default function ProductPage() {
-    const { slug } = useParams();
+	const { slug } = useParams();
 
-    const images = {
-        one: [one1, one2, one3, one4, one5, one6],
-        two: [two1, two2, two3, two4, two5, two6],
-        three: [three1, three2, three3, three4, three5, three6],
-    };
+	const images = {
+		one: [one1, one2, one3, one4, one5, one6],
+		two: [two1, two2, two3, two4, two5, two6],
+		three: [three1, three2, three3, three4, three5, three6],
+	};
 
-    const imgSrc = images[slug] || [];
+	const imgSrc = images[slug] || [];
 
-    return (
-        <div>
-            {imgSrc.length > 0 ? (
-                <div>
-                    <ImageList images={imgSrc} />
-                    <div className="flex justify-center items-center">
-                        <Link
-                            to={"/"}
-                            className="backdrop-blur transition-transform hover:scale-[1.02]"
-                        >
-                            <img
-                                src={BackToHome}
-                                alt={`Back to Home`}
-                                className="w-full max-w-[10rem] object-cover drop-shadow-xl"
-                            />
-                        </Link>
-                    </div>
-                </div>
-            ) : (
-                <div className="flex justify-center items-center min-h-screen">
-                    <Link
-                        to={"/"}
-                        className="backdrop-blur transition-transform hover:scale-[1.02]"
-                    >
-                        <img
-                            src={Continued}
-                            alt={`To be continued`}
-                            className="w-full max-w-[30rem] object-cover drop-shadow-xl"
-                        />
-                    </Link>
-                </div>
-            )}
+	return (
+		<div>
+			{imgSrc.length > 0 ? (
+				<div>
+					<ImageList images={imgSrc} />
+					<div className="flex justify-center items-center">
+						<Link
+							to={"/"}
+							className="backdrop-blur transition-transform hover:scale-[1.02]"
+						>
+							<img
+								src={BackToHome}
+								alt={`Back to Home`}
+								className="w-full max-w-[10rem] object-cover drop-shadow-xl"
+							/>
+						</Link>
+					</div>
+				</div>
+			) : (
+				<div className="flex justify-center items-center min-h-screen">
+					<Link
+						to={"/"}
+						className="backdrop-blur transition-transform hover:scale-[1.02]"
+					>
+						<img
+							src={Continued}
+							alt={`To be continued`}
+							className="w-full max-w-[30rem] object-cover drop-shadow-xl"
+						/>
+					</Link>
+				</div>
+			)}
 
-            <Footer />
-        </div>
-    );
+			<Footer />
+		</div>
+	);
 }
