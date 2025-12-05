@@ -21,7 +21,7 @@ function App() {
 	return (
 		<div className="flex flex-col justify-center items-center min-h-screen">
 			<div className="w-full max-w-[40rem] px-4">
-				<div className="grid grid-cols-2 aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-lg bg-white mx-auto">
+				<div className="grid grid-cols-2 w-full overflow-hidden rounded-2xl shadow-lg">
 					{sections.map((item, index) => (
 						<Link to={item.href} key={index}>
 							<img
@@ -33,12 +33,12 @@ function App() {
 					))}
 				</div>
 				{/* <div className="flex justify-center items-center py-4">
-                    <img
-                        src={Continued}
-                        alt={`Back to Home`}
-                        className="w-full max-w-[15rem] object-cover drop-shadow-xl"
-                    />
-                </div> */}
+					<img
+						src={Continued}
+						alt={`Back to Home`}
+						className="w-full max-w-[15rem] object-cover drop-shadow-xl"
+					/>
+				</div> */}
 			</div>
 
 			<Footer />
