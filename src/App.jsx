@@ -14,8 +14,8 @@ function App() {
 		{ href: "/one", src: One, alt: "one" },
 		{ href: "/two", src: Two, alt: "two" },
 		{ href: "/three", src: Three, alt: "three" },
-		{ href: "/", src: Four, alt: "four" },
-		{ href: "/", src: Five, alt: "Five" },
+		{ href: "/four", src: Four, alt: "four" },
+		{ href: "/five", src: Five, alt: "Five" },
 	];
 
 	return (

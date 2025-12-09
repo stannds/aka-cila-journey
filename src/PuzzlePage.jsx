@@ -25,6 +25,18 @@ import three4 from "./assets/three/4.png";
 import three5 from "./assets/three/5.png";
 import three6 from "./assets/three/6.png";
 
+import four1 from "./assets/four/1.png";
+import four2 from "./assets/four/2.png";
+import four3 from "./assets/four/3.png";
+import four4 from "./assets/four/4.png";
+import four5 from "./assets/four/5.png";
+import four6 from "./assets/four/6.gif";
+
+import five1 from "./assets/five/1.png";
+import five2 from "./assets/five/2.png";
+import five3 from "./assets/five/3.png";
+import five4 from "./assets/five/4.png";
+
 const ImageList = ({ images }) => (
 	<div className="flex justify-center items-start min-h-screen px-8 sm:px-10 py-10 overflow-y-auto">
 		<div className="w-full max-w-[36rem]">
@@ -53,6 +65,8 @@ export default function ProductPage() {
 		one: [one1, one2, one3, one4, one5, one6],
 		two: [two1, two2, two3, two4, two5, two6],
 		three: [three1, three2, three3, three4, three5, three6],
+		four: [four1, four2, four3, four4, four5, four6],
+		five: [five1, five2, five3, five4],
 	};
 
 	const imgSrc = images[slug] || [];
