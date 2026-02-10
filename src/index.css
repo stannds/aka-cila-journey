@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@keyframes bubble-left {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bubble-right {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bubble-left {
+  animation: bubble-left 1.2s cubic-bezier(.2,.8,.2,1);
+}
+
+.bubble-right {
+  animation: bubble-right 1.2s cubic-bezier(.2,.8,.2,1);
+}
+
+
