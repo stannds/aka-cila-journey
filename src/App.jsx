@@ -8,7 +8,7 @@ import Four from "./assets/puzzle/4.png";
 import Five from "./assets/puzzle/5.png";
 // import Continued from "./assets/continued.png";
 
-// import Tulip from "./assets/hidden.png";
+import Tulip from "./assets/hidden.png";
 
 export default function App() {
 	const sections = [
@@ -22,8 +22,8 @@ export default function App() {
 
 	return (
 		<div className="flex flex-col justify-center items-center min-h-screen">
-			<div className="relative w-full max-w-160 px-4">
-				<div className="grid grid-cols-2 w-full overflow-hidden rounded-2xl shadow-lg">
+			<div className="w-full max-w-160 px-4">
+				<div className="relative grid grid-cols-2 w-full overflow-hidden rounded-2xl shadow-lg">
 					{sections.map((item, index) => (
 						<Link to={item.href} key={index}>
 							<img
@@ -33,6 +33,15 @@ export default function App() {
 							/>
 						</Link>
 					))}
+					<div className="absolute flex justify-center items-center top-[10%] left-[40%] rotate-55">
+						<Link to={"/my-tulip"}>
+							<img
+								src={Tulip}
+								alt={`Tulip`}
+								className="w-10 sm:w-20 md:w-20 lg:w-20 object-cover drop-shadow-xl"
+							/>
+						</Link>
+					</div>
 				</div>
 				{/* <div className="flex justify-center items-center py-4">
 					<img
@@ -40,15 +49,6 @@ export default function App() {
 						alt={`Back to Home`}
 						className="w-full max-w-[15rem] object-cover drop-shadow-xl"
 					/>
-				</div> */}
-				{/* <div className="absolute flex justify-center items-center top-8 left-50 rotate-45">
-					<Link to={"/my-tulip"}>
-						<img
-							src={Tulip}
-							alt={`Tulip`}
-							className="w-full max-w-18 object-cover drop-shadow-xl"
-						/>
-					</Link>
 				</div> */}
 			</div>
 
