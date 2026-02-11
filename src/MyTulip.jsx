@@ -315,7 +315,7 @@ function ChatBubble({ message, isMe, onImageLoad }) {
 	return (
 		<div className={`flex ${isMe ? "justify-end" : "justify-start"} mb-2`}>
 			{message.type === TYPE.IMG ? (
-				<div className="aspect-3/4 max-w-[90%] rounded-2xl overflow-hidden bubble-left">
+				<div className="aspect-[3/4] w-[90%] rounded-2xl overflow-hidden bubble-left">
 					<img
 						src={message.img}
 						alt={`tulip for adek`}

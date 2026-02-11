@@ -23,11 +23,11 @@
 }
 
 .bubble-left {
-  animation: bubble-left 1.2s cubic-bezier(.2,.8,.2,1);
+  animation: bubble-left 1.2s cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 .bubble-right {
-  animation: bubble-right 1.2s cubic-bezier(.2,.8,.2,1);
+  animation: bubble-right 1.2s cubic-bezier(.2,.8,.2,1) forwards;
 }
 
 
