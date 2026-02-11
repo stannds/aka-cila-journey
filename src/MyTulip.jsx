@@ -325,14 +325,11 @@ function ChatBubble({ message, isMe, onImageLoad }) {
 				</div>
 			) : (
 				<div
-					className={`
-          max-w-[90%] px-2.5 py-1 rounded-2xl bubble-animate
-          ${
-				isMe
-					? "bg-blue-600 text-white rounded-br-sm bubble-right"
-					: "bg-gray-200 text-gray-900 rounded-bl-sm bubble-left"
-			}
-        `}
+					className={`max-w-[90%] px-2.5 py-1 rounded-2xl bubble-animate ${
+						isMe
+							? "bg-blue-600 text-white rounded-br-sm bubble-right"
+							: "bg-gray-200 text-gray-900 rounded-bl-sm bubble-left"
+					}`}
 				>
 					<span className="text-sm">
 						{parseTextWithLinks(message.text)}

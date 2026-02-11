@@ -1,4 +1,4 @@
-import Tulip from "../assets/tulips.jpeg";
+import Tulip from "/tulips.jpeg";
 import { TYPE } from "./constant";
 
 const linkLayout =
